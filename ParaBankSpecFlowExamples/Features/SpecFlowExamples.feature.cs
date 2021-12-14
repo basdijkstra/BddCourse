@@ -20,22 +20,23 @@ namespace ParaBankSpecFlowExamples.Features
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "3.9.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [NUnit.Framework.TestFixtureAttribute()]
-    [NUnit.Framework.DescriptionAttribute("WorkingWithTables")]
-    public partial class WorkingWithTablesFeature
+    [NUnit.Framework.DescriptionAttribute("SpecFlowExamples")]
+    public partial class SpecFlowExamplesFeature
     {
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
         
         private string[] _featureTags = ((string[])(null));
         
-#line 1 "WorkingWithTables.feature"
+#line 1 "SpecFlowExamples.feature"
 #line hidden
         
         [NUnit.Framework.OneTimeSetUpAttribute()]
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "WorkingWithTables", "\tDemonstrating the use of SpecFlow.Assist", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "SpecFlowExamples", "\tAs a SpecFlow student\r\n\tI want to learn more about the various SpecFlow features" +
+                    "\r\n\tSo I can use the tool more effectively", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -74,13 +75,13 @@ namespace ParaBankSpecFlowExamples.Features
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("A single instance")]
-        public virtual void ASingleInstance()
+        [NUnit.Framework.DescriptionAttribute("A basic scenario")]
+        public virtual void ABasicScenario()
         {
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("A single instance", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 4
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("A basic scenario", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+#line 6
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -100,47 +101,27 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-                TechTalk.SpecFlow.Table table3 = new TechTalk.SpecFlow.Table(new string[] {
-                            "FirstName",
-                            "LastName",
-                            "CustomerId",
-                            "Balance"});
-                table3.AddRow(new string[] {
-                            "John",
-                            "Smith",
-                            "12212",
-                            "1000"});
-#line 5
- testRunner.Given("the following user is present in the system", ((string)(null)), table3, "Given ");
+#line 7
+    testRunner.Given("user John is ready to open a new account", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 8
- testRunner.When("I apply SpecFlow.Assist", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("they open a new checking account", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table4 = new TechTalk.SpecFlow.Table(new string[] {
-                            "FirstName",
-                            "LastName",
-                            "CustomerId",
-                            "Balance"});
-                table4.AddRow(new string[] {
-                            "John",
-                            "Smith",
-                            "12212",
-                            "1000"});
 #line 9
- testRunner.Then("the following user can be retrieved from the system", ((string)(null)), table4, "Then ");
+ testRunner.Then("the new account is included in their list of accounts", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Multiple instances")]
-        public virtual void MultipleInstances()
+        [NUnit.Framework.DescriptionAttribute("Using regular expressions")]
+        public virtual void UsingRegularExpressions()
         {
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Multiple instances", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 13
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Using regular expressions", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+#line 11
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -160,44 +141,37 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-                TechTalk.SpecFlow.Table table5 = new TechTalk.SpecFlow.Table(new string[] {
-                            "FirstName",
-                            "LastName",
-                            "CustomerId",
-                            "Balance"});
-                table5.AddRow(new string[] {
-                            "John",
-                            "Smith",
-                            "12212",
-                            "1000"});
-                table5.AddRow(new string[] {
-                            "Bob",
-                            "Jones",
-                            "12323",
-                            "750"});
-#line 14
-    testRunner.Given("the following users are present in the system", ((string)(null)), table5, "Given ");
+                TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
+                            "accountNumber",
+                            "balance",
+                            "type"});
+                table1.AddRow(new string[] {
+                            "12345",
+                            "1000",
+                            "checking"});
+                table1.AddRow(new string[] {
+                            "54321",
+                            "750",
+                            "savings"});
+#line 12
+    testRunner.Given("user John has the following accounts", ((string)(null)), table1, "Given ");
 #line hidden
-#line 18
- testRunner.When("I apply SpecFlow.Assist", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 16
+ testRunner.When("he closes all of his savings accounts", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table6 = new TechTalk.SpecFlow.Table(new string[] {
-                            "FirstName",
-                            "LastName",
-                            "CustomerId",
-                            "Balance"});
-                table6.AddRow(new string[] {
-                            "Bob",
-                            "Jones",
-                            "12323",
-                            "750"});
-                table6.AddRow(new string[] {
-                            "John",
-                            "Smith",
-                            "12212",
-                            "1000"});
-#line 19
- testRunner.Then("the following users can be retrieved from the system", ((string)(null)), table6, "Then ");
+                TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
+                            "accountNumber",
+                            "balance",
+                            "type"});
+                table2.AddRow(new string[] {
+                            "12345",
+                            "1000",
+                            "checking"});
+#line 17
+ testRunner.Then("user John has the following account", ((string)(null)), table2, "Then ");
+#line hidden
+#line 20
+ testRunner.And("an amount of 750 will be retransfered to an existing account", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
             this.ScenarioCleanup();
